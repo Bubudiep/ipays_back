@@ -86,3 +86,4 @@ class UserViewSet(viewsets.ModelViewSet):
         queryset = queryset.get(username=request.user.username)
         serializer = self.get_serializer(queryset, many=False)
         return Response(serializer.data)
+    
